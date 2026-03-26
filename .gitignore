@@ -1,0 +1,15 @@
+# Node and Packages
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables
+.env
+.env.local
+
+# Database
+server/cf_time.db
+
+# OS Files
+.DS_Store

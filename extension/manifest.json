@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Time Tracker",
+  "version": "1.0",
+  "description": "Tracks your active time on Codeforces and syncs with Discord.",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "*://codeforces.com/*",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://codeforces.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
